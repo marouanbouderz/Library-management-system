@@ -1,0 +1,142 @@
+$sidebar-bg: #1e1e2d;
+$accent-color: #6366f1;
+$text-muted: #7e8299;
+$text-light: #ffffff;
+
+.modern-sidebar {
+    width: 260px;
+    height: 100vh;
+    background: $sidebar-bg;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    box-shadow: 10px 0 30px rgba(0,0,0,0.1);
+    z-index: 1000;
+
+    .sidebar-header {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 3rem;
+        
+        .logo-circle {
+            width: 40px;
+            height: 40px;
+            background: $accent-color;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
+        }
+
+        .brand-text {
+            color: $text-light;
+            font-weight: 700;
+            font-size: 1.25rem;
+            letter-spacing: -0.5px;
+            span { color: $accent-color; }
+        }
+    }
+
+    .sidebar-nav {
+        flex: 1;
+
+        .nav-section {
+            margin-bottom: 2rem;
+
+            .section-title {
+                color: $text-muted;
+                font-size: 0.75rem;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                font-weight: 600;
+                margin-bottom: 1rem;
+                padding-left: 0.5rem;
+            }
+        }
+
+        .nav-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            color: $text-muted;
+            text-decoration: none;
+            padding: 0.8rem 1rem;
+            border-radius: 12px;
+            margin-bottom: 0.5rem;
+            transition: all 0.3s ease;
+            font-weight: 500;
+
+            i { font-size: 1.1rem; width: 20px; text-align: center; }
+
+            &:hover {
+                background: rgba(255,255,255, 0.03);
+                color: $text-light;
+                transform: translateX(5px);
+            }
+
+            &.active {
+                background: $accent-color;
+                color: white;
+                box-shadow: 0 8px 15px rgba(99, 102, 241, 0.2);
+            }
+        }
+    }
+
+    .sidebar-footer {
+        .user-pill {
+            background: rgba(255,255,255, 0.05);
+            padding: 0.75rem;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            img { width: 32px; height: 32px; border-radius: 8px; }
+            
+            .user-name {
+                color: $text-light;
+                white-space: nowrap;
+                font-size: 0.9rem;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+// --- Creative Dashboard Elements ---
+.stat-card {
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+    cursor: default;
+    &:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.06) !important;
+    }
+
+    h3 {
+        font-family: 'Inter', 'Segoe UI', sans-serif;
+    }
+
+    .icon-box {
+        width: 56px;
+        height: 56px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+// Soft UI Badge Colors
+.badge-light-success { background-color: rgba(16, 185, 129, 0.12); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.1); }
+.badge-light-warning { background-color: rgba(245, 158, 11, 0.12); color: #f59e0b; border: 1px solid rgba(245, 158, 11, 0.1); }
+.bg-light-primary { background-color: rgba(99, 102, 241, 0.1) !important; }
+.bg-light-success { background-color: rgba(16, 185, 129, 0.1) !important; }
+.bg-light-warning { background-color: rgba(245, 158, 11, 0.1) !important; }
+
+.rounded-lg { border-radius: 1.25rem !important; }
